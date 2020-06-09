@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from '../logo.svg';
 import '../styles/App.css';
-import LinksList from './LinksList';
 
 function App() {
   return (
     <div className="App">
-      <LinksList />
+      {/* Place routing and app here */ }
+      <div>
+        Hackernews app coming soon....
+      </div>
     </div>
   );
 }
