@@ -20,6 +20,8 @@ export default class CreateLink extends Component {
   }
   render() {
     const { description, url } = this.state
+    const { history } = this.props;
+
     return (
       <div>
         <div className="flex flex-column mt3">
@@ -38,7 +40,11 @@ export default class CreateLink extends Component {
             placeholder="The URL for the link"
           />
         </div>
-        <Mutation mutation={POST_MUTATION} variables={{ description, url }}>
+        <Mutation
+          mutation={POST_MUTATION}
+          variables={ { description, url } }
+          onCompleted={() => history.push('/')}
+        >
           {
             postMutation => <button onClick={postMutation}>Submit</button>
           }
