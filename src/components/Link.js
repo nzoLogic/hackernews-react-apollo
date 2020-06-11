@@ -6,7 +6,7 @@ export default class Link extends Component {
     const { description, url } = link;
 
     return (
-      <div>
+      <div style={{padding: '8px'}}>
         {description}({ url })
       </div>
     )
