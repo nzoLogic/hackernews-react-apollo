@@ -77,7 +77,7 @@ export default class Login extends Component {
   }
 
   _confirm = async ({ login, signup }) => {
-    const token = this.state.login ? login : signup
+    const { token } = this.state.login ? login : signup
 
     this._saveUserData(token)
     this.props.history.push('/')
